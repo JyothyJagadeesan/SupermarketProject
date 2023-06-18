@@ -14,19 +14,18 @@ import Utilities.ExcelUtility;
 
 public class LoginTest extends Base
 {
-	// to give priority
-	@Test(retryAnalyzer = Retry.class,priority = 1,enabled = true,description = "TC006_Verify home page title",groups = {"Regression"})
+
+	@Test(description = "Verify that the user can login with valid username and correct password",retryAnalyzer = Retry.class,priority = 1,enabled = true,groups = {"Regression"})
 
     public void verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()
     {
 		LoginPage loginpage= new LoginPage(driver);
-		//chaining of pages
 		loginpage.enterUsernameOnUserfield(ExcelUtility.getString(1, 0, "LoginPage")).enterPasswordOnPasswordfield(ExcelUtility.getString(1, 1,"LoginPage")).clickOnSignInButton();
 	    boolean isHomePageElementVisible=loginpage.toCheckWhetherTheElementExist();
 		assertTrue(isHomePageElementVisible,"Unable to login with valid username and correct password");
 	}
 
-	@Test
+	@Test(description = "Verify that the user cannot login with valid username and incorrect password",retryAnalyzer = Retry.class,priority = 2,enabled = true,groups = {"Regression"})
 	public void verifyThatTheUserWontBeAbletoLoginwithValidusernameandIncorrectPasswordWhileClickonSignInButton()
     {
 		String expectedMessage="Sign In";
@@ -35,10 +34,10 @@ public class LoginTest extends Base
 		loginpage.enterUsernameOnUserfield(ExcelUtility.getString(2, 0, "LoginPage"));
 		loginpage.enterPasswordOnPasswordfield(ExcelUtility.getString(2, 1, "LoginPage"));
 		loginpage.clickOnSignInButton();
-		assertEquals(expectedMessage,actualMessage,"able to login with valid username and incorrect password");
+		assertEquals(expectedMessage,actualMessage,"Able to login with valid username and incorrect password");
 	}
 	
-	@Test
+	@Test(description = "Verify that the user cannot login with invalid username and correct password",retryAnalyzer = Retry.class,priority = 3,enabled = true,groups = {"Regression"})
 	public void verifyThatTheUserWontBeAbletoLoginwithInvalidusernameandcorrectPasswordWhileClickonSignInButton()
     {
 		String expectedMessage="Sign In";
@@ -50,7 +49,7 @@ public class LoginTest extends Base
 		assertEquals(expectedMessage,actualMessage,"able to login with invalid username and correct password");
 	}
 	
-	@Test
+	@Test(description = "Verify the user cannot login with invalid username and incorrect password",retryAnalyzer = Retry.class,priority = 4,enabled = true,groups = {"Regression"})
 	@Parameters({"username","password"})
 	public void verifyThatTheUserWontBeAbletoLoginwithInvalidusernameandIncorrectPasswordWhileClickonSignInButton(String username, String password)
     {
@@ -62,4 +61,5 @@ public class LoginTest extends Base
 		loginpage.clickOnSignInButton();
 		assertEquals(expectedMessage,actualMessage,"able to login with invalid username and incorrect password");
 	}
+	
 }

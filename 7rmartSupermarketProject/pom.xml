@@ -12,124 +12,105 @@
   <url>http://maven.apache.org</url>
   <build>
 
-		 <defaultGoal>package</defaultGoal>
-
-		<plugins>
-
-			<plugin>
-
-				<groupId>org.apache.maven.plugins</groupId>
-
-				<artifactId>maven-compiler-plugin</artifactId>
-
-				<version>3.8.1</version>
-
-				<configuration>
-
-					<source>1.8</source>
-
-					<target>1.8</target>
-
-				</configuration>
-
-			</plugin>
-
-			<plugin>
-
-				<groupId>org.apache.maven.plugins</groupId>
-
-				<artifactId>maven-surefire-plugin</artifactId>
-
-				<version>3.0.0</version>
-
-				<configuration>
-
-					<suiteXmlFiles>
-
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-
-					</suiteXmlFiles>
-
-				</configuration>
-
-			</plugin>
-
-		</plugins>
+  <defaultGoal>package</defaultGoal>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+        </configuration>
+      </plugin>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+        <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
+        </configuration>
+      </plugin>
+    </plugins>
 
 	</build>
 
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
+    <dependencies>
     
-    <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.8.3</version>
-</dependency>
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.5</version>
-    <scope>test</scope>
-</dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.8.3</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.5</version>
+        <scope>test</scope>
+      </dependency>
 
-<dependency>
-  <groupId>org.apache.poi</groupId>
-  <artifactId>poi</artifactId>
-  <version>5.2.3</version>
-  </dependency>
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>5.2.3</version>
+      </dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-<dependency>
-  <groupId>org.apache.poi</groupId>
-  <artifactId>poi-ooxml</artifactId>
-  <version>5.2.3</version>
-</dependency>
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.2.3</version>
+      </dependency>
 
-<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>5.2.3</version>
-			<scope>test</scope>
-		</dependency>
-<dependency>
-			<groupId>com.github.javafaker</groupId>
-			<artifactId>javafaker</artifactId>
-			<version>1.0.2</version>
-		</dependency>
+      <dependency>
+		<groupId>io.github.bonigarcia</groupId>
+		<artifactId>webdrivermanager</artifactId>
+		<version>5.2.3</version>
+		<scope>test</scope>
+	  </dependency>
+	  
+     <dependency>
+		<groupId>com.github.javafaker</groupId>
+		<artifactId>javafaker</artifactId>
+		<version>1.0.2</version>
+	 </dependency>
 		
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>5.0.9</version>
-		</dependency>
+	 <dependency>
+		<groupId>com.aventstack</groupId>
+		<artifactId>extentreports</artifactId>
+		<version>5.0.9</version>
+	 </dependency>
 		
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.17.1</version>
-		</dependency>
+	 <dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-core</artifactId>
+        <version>2.17.1</version>
+     </dependency>
 		
-		<dependency>
-  <groupId>org.projectlombok</groupId>
-  <artifactId>lombok</artifactId>
-  <version>1.18.22</version>
-</dependency>
+     <dependency>
+       <groupId>org.projectlombok</groupId>
+       <artifactId>lombok</artifactId>
+       <version>1.18.22</version>
+     </dependency>
 		
-		<dependency>
- <groupId>org.apache.logging.log4j</groupId>
- <artifactId>log4j-to-slf4j</artifactId>
- <version>2.17.2</version>
-</dependency>
-<dependency>
- <groupId>org.apache.logging.log4j</groupId>
- <artifactId>log4j-api</artifactId>
- <version>2.17.2</version>
-</dependency>
+     <dependency>
+       <groupId>org.apache.logging.log4j</groupId>
+       <artifactId>log4j-to-slf4j</artifactId>
+       <version>2.17.2</version>
+     </dependency>
+     
+     <dependency>
+       <groupId>org.apache.logging.log4j</groupId>
+       <artifactId>log4j-api</artifactId>
+       <version>2.17.2</version>
+     </dependency>
 
   </dependencies>
 </project>

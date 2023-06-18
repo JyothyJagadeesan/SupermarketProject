@@ -136,7 +136,7 @@ PageUtility pageutility= new PageUtility();
     	return this;
     }
 	
-	public boolean toCheckWhetherTheElementIsAdded()
+	public boolean checkWhetherTheElementIsAdded()
 	{
 		boolean isAlertDisplayed=alertMessage2.isDisplayed();
 		return isAlertDisplayed;
@@ -157,9 +157,10 @@ PageUtility pageutility= new PageUtility();
 		searchButton2.click();
 		return this;
 	}
-	public boolean toCheckIfTheElementFound(String searchElement)
+	boolean isElementFound=false;
+	public boolean checkIfTheElementFound(String searchElement)
 	{
-		boolean isElementFound=false;
+		
 		for(WebElement element:tableElement)
 		{
 			String actualElement=element.getText();
@@ -172,8 +173,10 @@ PageUtility pageutility= new PageUtility();
 		return isElementFound;
 	}
 	
-	public void toDeleteAnExistingElementInTheList(String elementToBeDeleted)
+	public void deleteAnExistingElementInTheList(String elementToBeDeleted)
 	{
+	if(isElementFound==true)
+	{	
 		for(WebElement element:tableElement)
 		{
 			String actualElement=element.getText();
@@ -183,19 +186,36 @@ PageUtility pageutility= new PageUtility();
 				driver.switchTo().alert().accept();
 		    	break;
 		    }
+		
 		}
+	}
 	}
 	public void clickOnDeleteIconOfTheElementToBeDeleted()
 	{
-		deleteButton.click();
+		if(isElementFound==true)
+		{
+		    deleteButton.click();
+		}  
 	}
 	public void handleAlert()
 	{
-		driver.switchTo().alert().accept();
+		if(isElementFound==true)
+		{
+		    driver.switchTo().alert().accept();
+		}  
 	}
-	public boolean toCheckIfTheElementIsDeleted()
+	public boolean checkIfTheElementIsDeleted()
 	{
-        boolean isAlertDisplayed=alertMessage.isDisplayed();
-		return isAlertDisplayed;
+		if(isElementFound==true)
+		{
+            boolean isAlertDisplayed=alertMessage.isDisplayed();
+		    return isAlertDisplayed;
+		}
+		else
+		{
+			boolean isAlertDisplayed=false;
+			return isAlertDisplayed;
+		}
 	}
+	
 }

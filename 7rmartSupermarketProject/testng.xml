@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="browser" value="chrome" />
+	<parameter name="username" value="jyothy" />
+	<parameter name="password" value="joe" />
+	
+	<parameter name="editElement" value="mango" />
+	<parameter name="title" value="orange" />
+	<parameter name="description" value="orange tree" />
+	<parameter name="pagename" value="tree" />
+	<parameter name="filename" value="C:\Users\Joe\Downloads\TIME-TABLE.jpg" />
+	<parameter name="searchElement" value="Flower" />
+	<parameter name="deleteElement" value="daffodil" />
+	
+	<parameter name="username1" value="yeshwanth" />
+	<parameter name="password1" value="joe1234" />
+	
+	<parameter name="fileName" value="C:\Users\Joe\Pictures\others\photography\IMG_20190621_192052-01.jpeg" />
+	<parameter name="link" value="https://www.google.com/" />
+	
+	<listeners>
+		<listener class-name="Retry.Listeners" />
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.obsqura.testscripts.ManageDeliveryBoyTest">
+		<methods>
+		 <include name="verifyThatTheUserIsAbleToAddANewDeliveryBoy"/>
+		</methods>  
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

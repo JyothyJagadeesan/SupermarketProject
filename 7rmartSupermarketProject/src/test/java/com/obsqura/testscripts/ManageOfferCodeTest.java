@@ -29,17 +29,4 @@ public class ManageOfferCodeTest extends Base
 		assertTrue(isAlertVisible,"success alert is not displayed");
 		manageoffercodepage.closeAlertButton();
 	}
-	
-/*	@DataProvider(name="ManageOfferCodeProvider")
-	public Object[][] getDataFromTestData()
-	{
-		return new Object[][]
-				{
-		        	{"XYZ456"},{"20%"},{"500 Rs"}
-			
-				};
-		
-	}; */
-
-	
 }

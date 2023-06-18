@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="fileName" value="C:\Users\Joe\Pictures\others\photography\IMG_20190621_192052-01.jpeg"/>
+  <parameter name="link" value="https://www.google.com/"/>
+  <parameter name="description" value="orange tree"/>
+  <parameter name="title" value="orange"/>
+  <parameter name="searchElement" value="Flower"/>
+  <parameter name="password" value="joe"/>
+  <parameter name="editElement" value="mango"/>
+  <parameter name="filename" value="C:\Users\Joe\Downloads\TIME-TABLE.jpg"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="password1" value="joe1234"/>
+  <parameter name="username1" value="yeshwanth"/>
+  <parameter name="username" value="jyothy"/>
+  <parameter name="pagename" value="tree"/>
+  <parameter name="deleteElement" value="edwed"/>
+  <listeners>
+    <listener class-name="Retry.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.obsqura.testscripts.ManagePagesTest">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="verifyThatTheUserIsableToDeleteAnExistingElement" invocation-numbers="0"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- com.obsqura.testscripts.ManagePagesTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

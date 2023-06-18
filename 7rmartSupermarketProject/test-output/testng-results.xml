@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-18T12:20:57 IST" name="Suite" finished-at="2023-06-18T12:21:16 IST" duration-ms="18641">
+    <groups>
+    </groups>
+    <test started-at="2023-06-18T12:20:57 IST" name="Test" finished-at="2023-06-18T12:21:16 IST" duration-ms="18641">
+      <class name="com.obsqura.testscripts.ManageDeliveryBoyTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.obsqura.testscripts.ManageDeliveryBoyTest@a3d9978]" started-at="2023-06-18T12:20:57 IST" name="initializeBrowser" finished-at="2023-06-18T12:21:09 IST" duration-ms="11681" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyThatTheUserIsAbleToAddANewDeliveryBoy()[pri:0, instance:com.obsqura.testscripts.ManageDeliveryBoyTest@a3d9978]" started-at="2023-06-18T12:21:09 IST" name="verifyThatTheUserIsAbleToAddANewDeliveryBoy" description="Verify that the user is able to add new delivery boy" finished-at="2023-06-18T12:21:16 IST" duration-ms="6685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyThatTheUserIsAbleToAddANewDeliveryBoy -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsqura.testscripts.ManageDeliveryBoyTest@a3d9978]" started-at="2023-06-18T12:21:16 IST" name="browserQuit" finished-at="2023-06-18T12:21:16 IST" duration-ms="233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyThatTheUserIsAbleToAddANewDeliveryBoy status=SUCCESS method=ManageDeliveryBoyTest.verifyThatTheUserIsAbleToAddANewDeliveryBoy()[pri:0, instance:com.obsqura.testscripts.ManageDeliveryBoyTest@a3d9978] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+      </class> <!-- com.obsqura.testscripts.ManageDeliveryBoyTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
